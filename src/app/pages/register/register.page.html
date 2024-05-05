@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="registration-comp">
+
+      <ion-input label="Full Name" [(ngModel)]="fullname" label-placement="floating" fill="outline" placeholder="Enter Full Name"></ion-input>
+        <br>
+      <ion-input label="Username"  [(ngModel)]="username" label-placement="floating" fill="outline" placeholder="Enter User Name"></ion-input>
+        <br>
+      <ion-input label="Email Address"  [(ngModel)]="email" type="email" label-placement="floating" fill="outline" placeholder="Enter Email"></ion-input>
+        <br>
+      <ion-input label="Password"  [(ngModel)]="password" type="password" label-placement="floating" fill="outline" placeholder="Enter Password"></ion-input>
+        <br>
+      <ion-input label="Confirm Password"  [(ngModel)]="confirmpassword" type="password" label-placement="floating" fill="outline" placeholder="Enter Confirm Password"></ion-input>
+        <br>
+      <ion-button id="open-registration" (click)="registration()" expand="block">Register</ion-button>
+      <ion-toast trigger="open-registration" message="The full name is {{fullname}}, the email is {{email}}, the Username is {{username}}, the Password {{password}}" [duration]="5000"></ion-toast>
+  </div>
+</ion-content> 

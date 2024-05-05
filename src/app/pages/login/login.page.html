@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="login-comp">
+      <ion-input label="Username" [(ngModel)]="username" label-placement="floating" fill="outline" placeholder="Enter Text"></ion-input>
+        <br>
+      <ion-input label="Password" [(ngModel)]="password" type="password" label-placement="floating" fill="outline" placeholder="Enter Text"></ion-input>
+        <br>
+      <ion-button  (click)="login()" *ngIf="!loader" id="open-toast" expand="block">Login</ion-button>
+
+      <ion-toast trigger="open-toast" message="The Username is {{username}} and the Password {{password}}" [duration]="5000" ></ion-toast>
+  </div>
+</ion-content>  
